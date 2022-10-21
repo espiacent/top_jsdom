@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
+
+$primary-color: #446273;
+$secondary-color: #FFFFFF;
+$background-color: #263740;
+$box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 130vh;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    background-color: $background-color;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: $primary-color;
+    font-weight: 700;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-shadow: $box-shadow;
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    font-family: 'Parisienne', cursive;
+    display: flex;
+    align-items: center;
+    margin: 10px 25px;
+    color: $secondary-color;
+    font-size: 2.8rem;
+}
+
+span {
+    margin-left: 18px;
+}
+
+h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.logoImage2 {
+    margin-left: 18px;
+}
+
+.maincontent {
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.maincontentLeft {
+    padding: 4%;
+    text-align: center;
+    color: $secondary-color;
+    width: 50%;
+}
+
+.maincontentLeft>h1 {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-decoration: underline;
+    min-width: 280px;
+}
+
+.maincontentLeft>p {
+    height: 75vh;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    font-family: 'Cabin', sans-serif;
+    min-width: 280px;
+}
+
+.maincontentRight {
+    width: 80vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.webpack {
+    height: 60vh;
+}
+
+.cat {
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 35vh;
+}
+
+#menucard1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: $secondary-color;
+    height: 33vh;
+    margin: 15%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.menucard {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: $secondary-color;
+    height: 35vh;
+    margin: 15%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: $primary-color;
+    position: fixed;
+    font-size: 0.9rem;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid white;
+    line-height: 6vh;
+}
+
+.footer>span {
+    color: $secondary-color;
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: 'Cabin', sans-serif;
+    border: 3px solid $secondary-color;
+    border-radius: 10px;
+    margin: 10px 20px 5px 10px;
+    font-size: 1.3rem;
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+
+    &:hover {
+        scale: 0.97;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $secondary-color;
+
+    &:hover {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+
+    &:focus {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+
+    &:active {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+
+    &:visited {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .logoText1,
+    .logoText2,
+    .logoImage2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .logoImage {
+        display: none;
+    }
+
+    .maincontent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maincontentLeft {
+        padding: 2%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    button {
+        display: block;
+        width: 300px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+}
