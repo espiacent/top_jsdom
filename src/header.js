@@ -3,48 +3,43 @@ import Heart from './assets/heart.png';
 import init from './index.js';
 
 export default function drawHeader() {
+
+    const elFact = (type, idcn) => {
+        const element = document.createElement(type);
+        element.id = idcn;
+        element.className = idcn;
+        return element
+    }
+
     const body = document.querySelector('body');
 
-    const navbar = document.createElement('div');
-    navbar.id = 'navbar';
-    navbar.className = 'navbar';
+    const navbar = elFact('div', 'navbar');
+    const logo = elFact('div', 'logo');
 
-    const logo = document.createElement('div');
-    logo.id = 'logo';
-    logo.className = 'logo';
-
-    const logoImage = new Image(80, 80);
+    const logoImage = elFact('img', 'logoImage');
     logoImage.src = Icon;
-    logoImage.id = 'logoImage';
-    logoImage.className = 'logoImage';
+    logoImage.width = 80;
 
-    const logoText1 = document.createElement('span');
+    const logoText1 = elFact('span', 'logoText1');
     logoText1.textContent = 'Chez';
-    logoText1.className = 'logoText1';
 
-    const logoImage2 = new Image(40, 40);
+    const logoImage2 = elFact('img', 'logoImage2');
     logoImage2.src = Heart;
-    logoImage2.id = 'logoImage2';
-    logoImage2.className = 'logoImage2';
+    logoImage2.width = 40;
 
-    const logoText2 = document.createElement('span');
+    const logoText2 = elFact('span', 'logoText2');
     logoText2.textContent = 'Webpack';
-    logoText2.className = 'logoText2';
 
-    const menu = document.createElement('div');
-    menu.id = 'menu';
-    menu.className = 'menu';
-
-    const btn1 = document.createElement('button');
+    const menu = elFact('div', 'menu');
+    const btn1 = elFact('button', 'btn1');
     btn1.textContent = 'Our Menu';
-    btn1.id = 'btn1';
 
-    const btn2 = document.createElement('button');
+    const btn2 = elFact('button', 'btn2');
     btn2.textContent = 'Impressions';
-    btn2.id = 'btn2';
 
     const link3 = document.createElement('a');
     link3.href = 'https://webpack.js.org/';
+    link3.target = '_blank';
 
     var btn3 = document.createElement('button');
     btn3.textContent = "Contact";
@@ -61,9 +56,7 @@ export default function drawHeader() {
     menu.appendChild(link3);
     link3.appendChild(btn3);
 
-
     btn1.onclick = ourMenu;
-
     btn2.onclick = impressions;
 
     const logoLink = document.getElementById('logoImage');
@@ -80,7 +73,6 @@ export default function drawHeader() {
         body.innerHTML = '';
         init('ourMenu');
     }
-
 
     function impressions() {
         const body = document.querySelector('body');
